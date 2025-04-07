@@ -10,6 +10,7 @@
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       # NOTE: Change this to aarch64-linux if you are on ARM
       system = "x86_64-linux";
+      hostname = "nixos";
       modules = [
         ./dell/drivers/hardware.nix
         ./dell/drivers/video.nix
