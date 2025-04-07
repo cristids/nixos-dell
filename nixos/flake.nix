@@ -7,13 +7,13 @@
 
   outputs = { self, nixpkgs, home-manager, ... }: {
 
-    nixosConfigurations.gpdp4-nix = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       # NOTE: Change this to aarch64-linux if you are on ARM
       system = "x86_64-linux";
       modules = [
-        # ./dell/drivers/hardware.nix
-        # ./dell/drivers/video.nix
-        ./configuration.nix
+        ./dell/drivers/hardware.nix
+        ./dell/drivers/video.nix
+        ./generic/configuration.nix
 
         # # make home-manager as a module of nixos
         # # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
