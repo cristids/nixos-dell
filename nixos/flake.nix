@@ -13,7 +13,7 @@
       modules = [
         # ./dell/drivers/hardware.nix
         # ./dell/drivers/video.nix
-        ./generic/configuration.nix
+        ./configuration.nix
 
         # # make home-manager as a module of nixos
         # # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
